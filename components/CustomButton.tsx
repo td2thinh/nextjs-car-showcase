@@ -5,6 +5,7 @@ import { CustomButtonProps } from "@/types/";
 
 function CustomButton({
   title,
+  btnType,
   containerStyles,
   handleClick,
 }: CustomButtonProps) {
