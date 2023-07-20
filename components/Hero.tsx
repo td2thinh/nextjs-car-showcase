@@ -1,7 +1,34 @@
-import React from "react";
+//prettier-ignore
+'use client'
+import CustomButton from "./CustomButton";
+import Image from "next/image";
 
 const Hero = () => {
-  return <div>Hero</div>;
+  const handleScroll = () => {};
+  return (
+    <div className="hero">
+      <div className="flex-1 pt-36 padding-x">
+        <h1 className="hero__title">The best rent-a-car near you</h1>
+        <p className="hero__subtitle">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, voluptatibus, quibusdam, quia voluptates voluptate
+        </p>
+
+        <CustomButton
+          title="Explore Now"
+          containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          handleClick={handleScroll}
+        />
+      </div>
+      <div className="hero__image-container">
+        <div className="hero__image">
+          <Image src="/hero.png" alt="hero" fill className="object-contain" />
+
+          <div className="hero__image__overlay"></div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Hero;
